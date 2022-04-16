@@ -38,7 +38,7 @@ const AvailableMeals = () => {
     const fetchMeals = async () => {
       setIsLoading(true);
       const response = await fetch(
-        "https://final-67af4-default-rtdb.firebaseio.com/meals.json"
+        `${process.env.REACT_APP_API_URL}/meals.json`
       );
 
       if (!response.ok) {
