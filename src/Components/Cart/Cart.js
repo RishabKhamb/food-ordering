@@ -28,7 +28,7 @@ const Cart = (props) => {
   };
   const submitOrderHandler = async (userData) => {
     setIsSubmitting(true);
-    await fetch(`${process.env.REACT_APP_API_URL}/meals.json`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/meal.json`, {
       method: "POST",
       body: JSON.stringify({
         user: userData,
